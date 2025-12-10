@@ -10,6 +10,10 @@
 
 This project is part of **[Winter of Open Source](https://winter-of-open-source.vercel.app/)**, where contributors can improve simulations, add new features, optimize performance, and enhance the overall project.
 
+## Demo
+
+<img src="media/demo3.png">
+
 ## How It Works
 
 The simulation is based on three core flocking behaviors:

@@ -31,7 +31,7 @@ class CanvasRenderer {
 
     ctx.fillStyle = boid.color;
     ctx.beginPath();
-    ctx.arc(boid.position.x, boid.position.y, 4, 0, Math.PI * 2);
+    ctx.arc(boid.position.x, boid.position.y, 5, 0, Math.PI * 2);
     ctx.fill();
   }
 

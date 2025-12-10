@@ -8,6 +8,6 @@ const CONFIG = {
   alignmentWeight: 1.0,
   separationWeight: 1.9,
 
-  trailLength: 10,
+  trailLength: 25,
   trailEnabled: true,
 };
