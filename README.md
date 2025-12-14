@@ -6,7 +6,7 @@
 
 **Boids** is an interactive browser-based flocking simulation that demonstrates emergent behavior from simple rules. Watch as individual agents (boids) interact with their neighbors using separation, alignment, and cohesion rules to create realistic, organic group movement patterns.
 
-[**Check it out!**](https://datavorous.github.io/boids/)
+[**LIVE DEMO**](https://datavorous.github.io/boids/)
 
 This project is part of **[Winter of Open Source](https://winter-of-open-source.vercel.app/)**, where contributors can improve simulations, add new features, optimize performance, and enhance the overall project.
 
@@ -23,6 +23,8 @@ The simulation is based on three core flocking behaviors:
 3. **Cohesion**: Boids steer to move towards the average location of local flockmates
 
 Each behavior contributes a steering force weighted by configurable parameters, allowing you to fine-tune the simulation dynamics.
+
+In order to understand how things work under the hood, read **[EXPLANATION.md](EXPLANATION.md)**.
 
 ## Table of Contents
 

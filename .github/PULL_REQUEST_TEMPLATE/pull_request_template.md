@@ -40,19 +40,9 @@ Describe how you tested your changes:
 - [ ] Added/updated tests (if applicable)
 - [ ] No new warnings or errors
 
-**Test commands run:**
-
-```bash
-python main.py
-# Add any other test commands
-```
-
-**Test results:**
-[Describe what happened]
-
 ## Checklist
 
-- [ ] My code follows the style guidelines (PEP 8)
+- [ ] My code follows the style guidelines
 - [ ] I have commented my code, particularly in hard-to-understand areas
 - [ ] I have updated the documentation (if needed)
 - [ ] My changes generate no new warnings
