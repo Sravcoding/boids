@@ -10,4 +10,11 @@ const CONFIG = {
 
   trailLength: 12,
   trailEnabled: true,
+
+  EDGE_BEHAVIORS: {
+    WRAP: "wrap",
+    BOUNCE: "bounce",
+    AVOID: "avoid",
+  },
+  edgeBehavior: "avoid",
 };

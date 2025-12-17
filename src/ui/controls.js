@@ -47,7 +47,6 @@ class Controls {
         this.togglePause();
       }
     });
-
   }
   startFPSCounter() {
     setInterval(() => {
