@@ -10,10 +10,12 @@ class Flock {
       const sep = b.separation(neighbors).mult(CONFIG.separationWeight);
       const ali = b.alignment(neighbors).mult(CONFIG.alignmentWeight);
       const coh = b.cohesion(neighbors).mult(CONFIG.cohesionWeight);
+      const wan = b.wander(Math.PI / 6).mult(CONFIG.wanderWeight);
 
       b.applyForce(sep);
       b.applyForce(ali);
       b.applyForce(coh);
+      b.applyForce(wan);
     }
   }
 }

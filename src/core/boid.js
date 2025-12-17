@@ -106,4 +106,20 @@ class Boid {
 
     return new Vec(0, 0);
   }
+
+  wander(smallAngle) {
+    let randomForce = new Vec(0, 0);
+    const angle = (Math.random() * 2 - 1) * smallAngle;
+    const x = this.velocity.x / this.velocity.mag();
+    const y = this.velocity.y / this.velocity.mag();
+    const sin = Math.sin(angle);
+    const cos = Math.cos(angle);
+
+    randomForce.x = x * cos - y * sin;
+    randomForce.y = x * sin + y * cos;
+
+    randomForce.limit(this.maxForce);
+
+    return randomForce;
+  }
 }
