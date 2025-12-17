@@ -14,18 +14,21 @@ class CanvasRenderer {
       ctx.lineCap = "round";
       ctx.lineJoin = "round";
 
-    for (let i = 1; i < boid.trail.length; i++) {
-        const init=boid.trail[i-1];
-        const final=boid.trail[i];
-        const pixelbuffer=5;
-        const dist=((final.x-init.x)**2 + (final.y-init.y)**2)**0.5
+      for (let i = 1; i < boid.trail.length; i++) {
+        const init = boid.trail[i - 1];
+        const final = boid.trail[i];
+        const pixelbuffer = 5;
+        const dist = ((final.x - init.x) ** 2 + (final.y - init.y) ** 2) ** 0.5;
 
-        ctx.globalAlpha = i**2 / boid.trail.length**2;
+        ctx.globalAlpha = i ** 2 / boid.trail.length ** 2;
         ctx.beginPath();
         ctx.moveTo(init.x, init.y);
-        ctx.lineTo(init.x + ((pixelbuffer/dist)*(final.x-init.x)), init.y + ((pixelbuffer/dist)*(final.y-init.y)));
+        ctx.lineTo(
+          init.x + (pixelbuffer / dist) * (final.x - init.x),
+          init.y + (pixelbuffer / dist) * (final.y - init.y)
+        );
         ctx.stroke();
-      }    
+      }
       ctx.globalAlpha = 1.0;
     }
 
@@ -39,13 +42,12 @@ class CanvasRenderer {
     ctx.fill();
   }
 
-  render(controls) { 
-    
-    window.addEventListener('resize',() =>{
-      this.canvas.width=sim.width=window.innerWidth;
-      this.canvas.height=sim.height=window.innerHeight;
-    })
-      
+  render(controls) {
+    window.addEventListener("resize", () => {
+      this.canvas.width = sim.width = window.innerWidth;
+      this.canvas.height = sim.height = window.innerHeight;
+    });
+
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     const showVectors = controls ? controls.shouldDrawVectors() : true;
     for (let b of this.flock.boids) this.drawBoid(b, showVectors);
