@@ -9,7 +9,7 @@ const CONFIG = {
   separationWeight: 1.9,
   wanderWeight: 1.0,
 
-  wanderAngle: Math.PI / 6,
+  wanderAngle: Math.PI / 3,
 
   trailLength: 12,
   trailEnabled: true,
